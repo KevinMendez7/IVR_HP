@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gmap="http://www.example.org/gmap" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <gmap:VxmlType xmi:id="_33kK0FjKEeiqGpQLkAnqcQ" version="1.13">
+    <globalEventHandler xmi:type="gmap:GlobalEventHandlerType" xmi:id="_33kx4VjKEeiqGpQLkAnqcQ"/>
+    <target xmi:type="gmap:TargetType" xmi:id="_33kx4FjKEeiqGpQLkAnqcQ">
+      <stdTransitionTargetSetVariable xmi:type="gmap:StandardTransitionTargetSetVariableType" xmi:id="_rWN_gGXCEei5hsbkFwTPig" source="_33kx4FjKEeiqGpQLkAnqcQ" targetElement="_VtzFkGXCEei5hsbkFwTPig"/>
+    </target>
+    <variable xmi:type="gmap:VariableType" xmi:id="_33kx4ljKEeiqGpQLkAnqcQ">
+      <var xmi:type="gmap:VarType" xmi:id="_1OBcwWPuEeihn48AkZuvzg" name="test" value=""/>
+      <var xmi:type="gmap:VarType" xmi:id="_ERql4GXCEei5hsbkFwTPig" name="callingNumber" value=""/>
+      <var xmi:type="gmap:VarType" xmi:id="_e4wZQGXCEei5hsbkFwTPig" name="desturi" value=""/>
+      <var xmi:type="gmap:VarType" xmi:id="_mp0h0GXCEei5hsbkFwTPig" name="remoteuri" value=""/>
+      <var xmi:type="gmap:VarType" xmi:id="_MII9cGXDEei5hsbkFwTPig" name="callingIP" value=""/>
+    </variable>
+    <callTransfer xmi:type="gmap:CallTransfer" xmi:id="_4nqLAFjKEeiqGpQLkAnqcQ" connecttimeout="40s" destinationExpr="desturi" enabled="No" id="transfer" label="transfer" maxtime="600s" namelist="remoteuri" type="bridge">
+      <play xmi:type="gmap:PromptType" xmi:id="_MBLkcFjLEeiqGpQLkAnqcQ" promptFile="../promptFiles/complex/transferMessage.xml" type="complex"/>
+      <var xmi:type="gmap:VarType" xmi:id="_1OBcwGPuEeihn48AkZuvzg" name="test"/>
+      <stdTransitionCallTransferGotoTarget xmi:type="gmap:StandardTransitionCallTransferGotoTargetType" xmi:id="_Xp7wQFjLEeiqGpQLkAnqcQ" source="_4nqLAFjKEeiqGpQLkAnqcQ" targetElement="_V1AO8FjLEeiqGpQLkAnqcQ"/>
+    </callTransfer>
+    <setVariable xmi:type="gmap:SetType" xmi:id="_VtzFkGXCEei5hsbkFwTPig" id="SetVariable_1" label="Set Variable">
+      <var xmi:type="gmap:VarType" xmi:id="_nHEXIGXFEei5hsbkFwTPig" name="callingNumber" value="getMsisdn(session.connection.remote.uri)"/>
+      <var xmi:type="gmap:VarType" xmi:id="_nHE-MGXFEei5hsbkFwTPig" name="remoteuri" value="'sip:'+callingNumber+'@10.221.160.173:5060'"/>
+      <var xmi:type="gmap:VarType" xmi:id="_nHE-MWXFEei5hsbkFwTPig" name="callingIP" value="getServerIP(session.connection.remote.uri)"/>
+      <var xmi:type="gmap:VarType" xmi:id="_nHE-MmXFEei5hsbkFwTPig" name="desturi" value="'sip:1527@'+callingIP+';user=phone'"/>
+      <stdTransitionSetVariableLog xmi:type="gmap:StandardTransitionSetVariableLogType" xmi:id="_rvZ7kGXCEei5hsbkFwTPig" source="_VtzFkGXCEei5hsbkFwTPig" targetElement="_jKIb4F9AEeifj4bZLeq2wQ"/>
+    </setVariable>
+    <gotoTarget xmi:type="gmap:GotoTargetType" xmi:id="_V1AO8FjLEeiqGpQLkAnqcQ" id="exit" label="exit" target="disconnect.vxml"/>
+    <log xmi:type="gmap:LogType" xmi:id="_jKIb4F9AEeifj4bZLeq2wQ" desc="Log" id="Log_1" label="log" logtext="log                           :  " sourceExpr="[desturi]">
+      <stdTransitionLogCallTransfer xmi:type="gmap:StandardTransitionLogCallTransferType" xmi:id="_pSVwQF9AEeifj4bZLeq2wQ" source="_jKIb4F9AEeifj4bZLeq2wQ" targetElement="_4nqLAFjKEeiqGpQLkAnqcQ"/>
+    </log>
+  </gmap:VxmlType>
+  <notation:Diagram xmi:id="_33kx41jKEeiqGpQLkAnqcQ" type="Gmap" element="_33kK0FjKEeiqGpQLkAnqcQ" name="transfer.mmdiag" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_33kx5FjKEeiqGpQLkAnqcQ" type="1003" element="_33kx4FjKEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_33kx5VjKEeiqGpQLkAnqcQ" x="185" y="11"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_33kx5ljKEeiqGpQLkAnqcQ" type="1015" element="_33kx4VjKEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_33kx51jKEeiqGpQLkAnqcQ" x="350" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_33kx6FjKEeiqGpQLkAnqcQ" type="1001" element="_33kx4ljKEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_33kx6VjKEeiqGpQLkAnqcQ"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_4nvqkFjKEeiqGpQLkAnqcQ" type="1013" element="_4nqLAFjKEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4nvqkVjKEeiqGpQLkAnqcQ" x="185" y="215"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_V1A2AFjLEeiqGpQLkAnqcQ" type="1020" element="_V1AO8FjLEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V1A2AVjLEeiqGpQLkAnqcQ" x="195" y="340"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_jKSM4F9AEeifj4bZLeq2wQ" type="1017" element="_jKIb4F9AEeifj4bZLeq2wQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jKSM4V9AEeifj4bZLeq2wQ" x="320" y="125"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_Vt0TsGXCEei5hsbkFwTPig" type="1006" element="_VtzFkGXCEei5hsbkFwTPig" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Vt0TsWXCEei5hsbkFwTPig" x="186" y="66"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_33kx6ljKEeiqGpQLkAnqcQ"/>
+    <edges xmi:type="notation:Connector" xmi:id="_Xp_aoFjLEeiqGpQLkAnqcQ" type="3213" element="_Xp7wQFjLEeiqGpQLkAnqcQ" source="_4nvqkFjKEeiqGpQLkAnqcQ" target="_V1A2AFjLEeiqGpQLkAnqcQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_Xp_aoVjLEeiqGpQLkAnqcQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Xp_aoljLEeiqGpQLkAnqcQ" points="[3, 20, 1, -59]$[3, 59, 1, -20]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_pSe6MF9AEeifj4bZLeq2wQ" type="3336" element="_pSVwQF9AEeifj4bZLeq2wQ" source="_jKSM4F9AEeifj4bZLeq2wQ" target="_4nvqkFjKEeiqGpQLkAnqcQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_pSe6MV9AEeifj4bZLeq2wQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pSe6Ml9AEeifj4bZLeq2wQ" points="[-63, 3, 114, -8]$[-148, 9, 29, -2]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pSycMF9AEeifj4bZLeq2wQ" id="(0.7716535433070866,0.45)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_rWQbwGXCEei5hsbkFwTPig" type="3263" element="_rWN_gGXCEei5hsbkFwTPig" source="_33kx5FjKEeiqGpQLkAnqcQ" target="_Vt0TsGXCEei5hsbkFwTPig">
+      <styles xmi:type="notation:FontStyle" xmi:id="_rWQbwWXCEei5hsbkFwTPig" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rWQbwmXCEei5hsbkFwTPig" points="[7, 20, 6, -35]$[65, 47, 64, -8]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_rvdl8GXCEei5hsbkFwTPig" type="3273" element="_rvZ7kGXCEei5hsbkFwTPig" source="_Vt0TsGXCEei5hsbkFwTPig" target="_jKSM4F9AEeifj4bZLeq2wQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_rvdl8WXCEei5hsbkFwTPig" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rvdl8mXCEei5hsbkFwTPig" points="[40, 20, -94, -39]$[71, 56, -63, -3]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<watchedvariable> <documents iswatched="true" name="TestIVR">
+        <document iswatched="false" name="globalContext">
+            
+            
+            
+            
+        
+            
+            
+            
+        
+        
+        
+            
+        
+        
+            
+        
+        
+        
+        
+        <element id="initialVariables" iswatched="false" name="initialVariables" type="script"/>
+            <element id="template" iswatched="false" name="template" type="script"/>
+            <element id="audioStream" iswatched="false" name="audioStream" type="script"/>
+            <element id="deepestValidations" iswatched="false" name="deepestValidations" type="script"/>
+        </document>
+        <document iswatched="true" name="start">
+            
+            
+            
+            
+        
+            
+            
+            
+        
+        
+        
+        
+            
+        
+        
+        
+            
+        
+        
+            
+        
+        
+        
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        
+            
+        
+        
+        
+            
+            
+        
+            <element id="init" iswatched="false" name="init" type="setVariable"/>
+            <element id="ExternalGoto_1" iswatched="false" name="ExternalGoto" type="externalGoto"/>
+        
+        
+        
+        
+        <element id="Log_1" iswatched="false" name="log" type="log"/>
+        </document>
+        <document iswatched="false" name="liberar_llamada">
+            <element id="Disconnect_1" iswatched="false" name="disconnect" type="disconnect"/>
+        </document>
+        <document iswatched="false" name="startWS">
+            <element id="GotoTarget_1" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="Log" iswatched="false" name="prueba" type="log"/>
+            <element id="Script_1" iswatched="false" name="Script" type="script"/>
+        </document>
+    <document iswatched="false" name="startMenu">
+            <element id="welcomeMessage" iswatched="false" name="welcomeMessage" type="play"/>
+            <element id="menu" iswatched="false" name="menu" type="input"/>
+            <element id="CallTransfer_1" iswatched="false" name="Call Transfer" type="callTransfer"/>
+            <element id="validateTransfer" iswatched="false" name="validateTransfer" type="test"/>
+            <element id="validateAudio" iswatched="false" name="validateAudio" type="test"/>
+            <element id="setInicialValues" iswatched="false" name="setInicialValues" type="setVariable"/>
+            <element id="GotoTarget_1" iswatched="false" name="GotoTarget" type="gotoTarget"/>
+            <element id="Log_2" iswatched="false" name="" type="log"/>
+            <element id="Log_3" iswatched="false" name="error" type="log"/>
+        </document>
+    <document iswatched="false" name="desvio">
+            <element id="CallTransfer_1" iswatched="false" name="Call Transfer" type="callTransfer"/>
+        <element id="Log_1" iswatched="false" name="test" type="log"/>
+        </document>
+    <document iswatched="false" name="start_test">
+            <element id="SetVariable_1" iswatched="false" name="Set Variable" type="setVariable"/>
+            
+        <element id="CallTransfer_1" iswatched="false" name="Call Transfer" type="callTransfer"/>
+            <element id="SetVariable_1" iswatched="false" name="initialVariable" type="setVariable"/>
+            <element id="SetVariable_2" iswatched="false" name="desturi" type="setVariable"/>
+            <element id="SetVariable_3" iswatched="false" name="remoteuri" type="setVariable"/>
+            <element id="Log_1" iswatched="false" name="Info" type="log"/>
+            <element id="Log_2" iswatched="false" name="" type="log"/>
+            <element id="Log_3" iswatched="false" name="" type="log"/>
+            <element id="Log_4" iswatched="false" name="" type="log"/>
+            <element id="Log_5" iswatched="false" name="Info" type="log"/>
+            <element id="Log_6" iswatched="false" name="Info" type="log"/>
+        </document>
+    <document iswatched="false" name="menu">
+            
+            
+        <element id="menu" iswatched="false" name="menu" type="input"/>
+        <element id="optionNavigated" iswatched="false" name="optionNavigated" type="externalGoto"/>
+        
+        <element id="reasignState" iswatched="false" name="reasignState" type="setVariable"/>
+        
+        
+        <element id="getRules" iswatched="false" name="getRules" type="setVariable"/>
+        
+        
+        
+        </document>
+    <document iswatched="false" name="disconnect">
+            <element id="Disconnect_1" iswatched="false" name="disconnect" type="disconnect"/>
+        </document>
+    <document iswatched="false" name="transfer">
+            <element id="transfer" iswatched="false" name="transfer" type="callTransfer"/>
+            <element id="exit" iswatched="false" name="exit" type="gotoTarget"/>
+        <element id="Log_1" iswatched="false" name="log" type="log"/>
+        <element id="SetVariable_1" iswatched="false" name="Set Variable" type="setVariable"/>
+        </document>
+    <document iswatched="false" name="audio">
+            <element id="defineAudioArray" iswatched="false" name="defineAudioArray" type="setVariable"/>
+        <element id="message" iswatched="false" name="message" type="play"/>
+            <element id="hasMoreData" iswatched="false" name="hasMoreData" type="test"/>
+            <element id="updateArray" iswatched="false" name="updateArray" type="setVariable"/>
+            
+        
+        
+        
+        <element id="ExternalGoto_1" iswatched="false" name="ExternalGoto" type="externalGoto"/>
+        <element id="Log_1" iswatched="false" name="balance" type="log"/>
+        </document>
+    <document iswatched="false" name="backend">
+            <element id="backend" iswatched="false" name="backend" type="script"/>
+            <element id="ExternalGoto" iswatched="false" name="ExternalGoto" type="externalGoto"/>
+        </document>
+    <document iswatched="false" name="merge"/>
+    </documents>
+</watchedvariable>

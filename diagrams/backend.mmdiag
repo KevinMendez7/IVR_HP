@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gmap="http://www.example.org/gmap" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <gmap:VxmlType xmi:id="_p56mcG4OEei2ep13hjBVQg" version="1.13">
+    <globalEventHandler xmi:type="gmap:GlobalEventHandlerType" xmi:id="_p6vs4W4OEei2ep13hjBVQg"/>
+    <target xmi:type="gmap:TargetType" xmi:id="_p6vs4G4OEei2ep13hjBVQg">
+      <stdTransitionTargetScript xmi:type="gmap:StandardTransitionTargetScriptType" xmi:id="_RjjbYG4VEei2ep13hjBVQg" source="_p6vs4G4OEei2ep13hjBVQg" targetElement="_dEuN8G4UEei2ep13hjBVQg"/>
+    </target>
+    <variable xmi:type="gmap:VariableType" xmi:id="_p6vs4m4OEei2ep13hjBVQg"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_dEuN8G4UEei2ep13hjBVQg" connetorRequest="WSIVRCAM" connetorType="WSDIVRCAMService" id="backend" isData="false" label="backend" sensitivityLocal="false">
+      <var xmi:type="gmap:VarType" xmi:id="_plME4G4UEei2ep13hjBVQg" name="ivrpaResult"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_plME4W4UEei2ep13hjBVQg" name="WSIVRCAM.Metodo" value="'getClientData'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_plMr8G4UEei2ep13hjBVQg" name="WSIVRCAM.nombreParametro" value="'msisdn'"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_plMr8W4UEei2ep13hjBVQg" name="WSIVRCAM.valorParametro" value="subscriber.number"/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_plMr8m4UEei2ep13hjBVQg" name="http.authorization" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_plMr824UEei2ep13hjBVQg" name="headers" value=""/>
+      <connetorParameter xmi:type="gmap:ConnetorParameterType" xmi:id="_plMr9G4UEei2ep13hjBVQg" name="private" value="false"/>
+      <stdTransitionScriptExternalGoto xmi:type="gmap:StandardTransitionScriptExternalGotoType" xmi:id="_cCNyoG4VEei2ep13hjBVQg" source="_dEuN8G4UEei2ep13hjBVQg" targetElement="_ZttZYG4VEei2ep13hjBVQg"/>
+    </script>
+    <externalGoto xmi:type="gmap:ExternalGotoType" xmi:id="_ZttZYG4VEei2ep13hjBVQg" expr="handleNextCallflow(subscriber)" fetchhint="" id="ExternalGoto" label="ExternalGoto" method="GET" type="goto"/>
+  </gmap:VxmlType>
+  <notation:Diagram xmi:id="_p6vs424OEei2ep13hjBVQg" type="Gmap" element="_p56mcG4OEei2ep13hjBVQg" name="backend.mmdiag" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_p6vs5G4OEei2ep13hjBVQg" type="1003" element="_p6vs4G4OEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p6vs5W4OEei2ep13hjBVQg" x="130" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_p6vs5m4OEei2ep13hjBVQg" type="1015" element="_p6vs4W4OEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p6vs524OEei2ep13hjBVQg" x="270" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_p6wT8G4OEei2ep13hjBVQg" type="1001" element="_p6vs4m4OEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p6wT8W4OEei2ep13hjBVQg"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_dEvcEG4UEei2ep13hjBVQg" type="1010" element="_dEuN8G4UEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dEvcEW4UEei2ep13hjBVQg" x="135" y="110"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_ZtvOkG4VEei2ep13hjBVQg" type="1008" element="_ZttZYG4VEei2ep13hjBVQg" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZtvOkW4VEei2ep13hjBVQg" x="137" y="215"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_p6wT8m4OEei2ep13hjBVQg"/>
+    <edges xmi:type="notation:Connector" xmi:id="_Rjl3oG4VEei2ep13hjBVQg" type="3219" element="_RjjbYG4VEei2ep13hjBVQg" source="_p6vs5G4OEei2ep13hjBVQg" target="_dEvcEG4UEei2ep13hjBVQg">
+      <styles xmi:type="notation:FontStyle" xmi:id="_Rjl3oW4VEei2ep13hjBVQg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Rjl3om4VEei2ep13hjBVQg" points="[9, 20, 0, -66]$[10, 80, 1, -6]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Rj3kcG4VEei2ep13hjBVQg" id="(0.5275590551181102,0.15)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_cCWVgG4VEei2ep13hjBVQg" type="3032" element="_cCNyoG4VEei2ep13hjBVQg" source="_dEvcEG4UEei2ep13hjBVQg" target="_ZtvOkG4VEei2ep13hjBVQg">
+      <styles xmi:type="notation:FontStyle" xmi:id="_cCWVgW4VEei2ep13hjBVQg" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cCWVgm4VEei2ep13hjBVQg" points="[10, 20, 8, -85]$[10, 85, 8, -20]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

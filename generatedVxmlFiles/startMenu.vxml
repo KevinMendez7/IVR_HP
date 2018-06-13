@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml application="globalContext.vxml" version="2.1" xmlns="http://www.w3.org/2001/vxml" xmlns:gmap="http://www.example.org/gmap" xmlns:java="com.hp.ocstudio.gmap.diagram.codegeneration.XSLSupportFunctions" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+    <var expr="0" name="chosenNumber"/>
+    <var expr="" name="client"/>
+    <var expr="" name="testClient"/>
+    <var expr="" name="testValue"/>
+    <var expr="1527" name="desvio"/>
+    <var expr="" name="result"/>
+    <catch count="1" event="error.connection.noauthorization">
+        <log label="error">error                      : <value expr="[desvio,  result]"/></log>
+    </catch>
+    <form id="setInicialValues">
+        <block>
+            <assign expr="subscriberTemplate" name="client"/>
+            <assign expr="client.actions.a(client, respAPPDPP)" name="client"/>
+            <assign expr="client.actions.b(client, respIVRPA)" name="client"/>
+            <assign expr="client.actions.c(client)" name="client"/>
+            <assign expr="client.actions.d(client)" name="client"/>
+            <assign expr="test(flow)" name="testValue"/>
+            <prompt>
+                <audio expr="getWelcome(client)"/>
+            </prompt>
+            <goto nextitem="menu"/>
+        </block>
+        <field name="menu" type="digits">
+            <prompt>
+                <audio expr="getMenu(client, flow)"/>
+            </prompt>
+            <filled>
+                <assign expr="menu" name="chosenNumber"/>
+                <if cond="validateActionTransfer(client, testValue)">
+                    <goto next="#CallTransfer_1"/>
+                    <elseif cond="validateActionAudio(client, testValue)"/>
+                    <log>test                  : <value expr="testValue"/></log>
+                    <goto next="#GotoTarget_1"/>
+                    <else/>
+                    <goto next="#GotoTarget_1"/>
+                </if>
+            </filled>
+        </field>
+    </form>
+    <form id="GotoTarget_1">
+        <block>
+            <goto next="liberar_llamada.vxml"/>
+        </block>
+    </form>
+    <form id="CallTransfer_1">
+        <transfer bridge="false" dest="desvio" name="CallTransfer_1">
+            <prompt>
+                <audio expr="getTransferAudio(client)"/>
+            </prompt>
+            <filled>
+                <assign expr="CallTransfer_1" name="result"/>
+            </filled>
+        </transfer>
+    </form>
+</vxml>

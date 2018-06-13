@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar mode="dtmf" version="1.0" xmlns="http://www.w3.org/2001/06/grammar">
+	<rule id="pin">
+    	<item repeat="1-8">
+        	<ruleref uri="#inputMasc"/>
+        </item>
+    </rule>
+	<rule id ="inputMasc" scope="public">
+		<one-of >
+			<item>1</item>
+			<item>2</item>			
+			<item>3</item>
+			<item>4</item>
+			<item>5</item>
+			<item>6</item>
+			<item>7</item>
+			<item>8</item>
+			<item>9</item>
+			<item>0</item>
+		</one-of>
+	</rule>		
+</grammar>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Ocmp CDR selection Properties for this Project </comment>
+<entry key="port">5000</entry>
+<entry key="servicename">kevin_test</entry>
+<entry key="username">ocadmin</entry>
+<entry key="filelist"/>
+<entry key="serverversion">someVersion</entry>
+<entry key="localFilePath">Default</entry>
+<entry key="servername">http://10.221.160.212</entry>
+<entry key="cdr">10</entry>
+<entry key="selection">External</entry>
+<entry key="password">ocadmin</entry>
+</properties>

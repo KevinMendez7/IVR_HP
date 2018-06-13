@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml application="globalContext.vxml" version="2.1" xmlns="http://www.w3.org/2001/vxml" xmlns:gmap="http://www.example.org/gmap" xmlns:java="com.hp.ocstudio.gmap.diagram.codegeneration.XSLSupportFunctions" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+    <var expr="" name="wsresp"/>
+    <form id="Script_1">
+        <block>
+            <data name="Script_1" srcexpr="WSIVRCAM_WSDIVRCAMService('ConsultaMascaraIVRPA','vani','50243943531',null,null,false)"/>
+            <assign expr="Script_1" name="wsresp"/>
+            <log label="prueba">resultado------<value expr="wsresp.HttpResponse.WSIVRCAMResponse[&apos;return&apos;][0].valorWS + &apos;     esta es la respuesta&apos;"/></log>
+            <goto next="liberar_llamada.vxml"/>
+        </block>
+    </form>
+</vxml>

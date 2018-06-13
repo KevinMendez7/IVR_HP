@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gmap="http://www.example.org/gmap" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <gmap:VxmlType xmi:id="_R6DcUFjLEeiqGpQLkAnqcQ" version="1.13">
+    <globalEventHandler xmi:type="gmap:GlobalEventHandlerType" xmi:id="_R6EDYVjLEeiqGpQLkAnqcQ"/>
+    <target xmi:type="gmap:TargetType" xmi:id="_R6EDYFjLEeiqGpQLkAnqcQ">
+      <stdTransitionTargetDisconnect xmi:type="gmap:StandardTransitionTargetDisconnectType" xmi:id="_UBzzAFjLEeiqGpQLkAnqcQ" source="_R6EDYFjLEeiqGpQLkAnqcQ" targetElement="_SoXT0FjLEeiqGpQLkAnqcQ"/>
+    </target>
+    <variable xmi:type="gmap:VariableType" xmi:id="_R6EqcFjLEeiqGpQLkAnqcQ"/>
+    <disconnect xmi:type="gmap:DisconnectType" xmi:id="_SoXT0FjLEeiqGpQLkAnqcQ" id="Disconnect_1"/>
+  </gmap:VxmlType>
+  <notation:Diagram xmi:id="_R6EqcVjLEeiqGpQLkAnqcQ" type="Gmap" element="_R6DcUFjLEeiqGpQLkAnqcQ" name="disconnect.mmdiag" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_R6EqcljLEeiqGpQLkAnqcQ" type="1003" element="_R6EDYFjLEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R6Eqc1jLEeiqGpQLkAnqcQ" x="130" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_R6EqdFjLEeiqGpQLkAnqcQ" type="1015" element="_R6EDYVjLEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R6EqdVjLEeiqGpQLkAnqcQ" x="270" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_R6EqdljLEeiqGpQLkAnqcQ" type="1001" element="_R6EqcFjLEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R6Eqd1jLEeiqGpQLkAnqcQ"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_SocMUFjLEeiqGpQLkAnqcQ" type="1023" element="_SoXT0FjLEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SocMUVjLEeiqGpQLkAnqcQ" x="135" y="80"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_R6EqeFjLEeiqGpQLkAnqcQ"/>
+    <edges xmi:type="notation:Connector" xmi:id="_UB2PQFjLEeiqGpQLkAnqcQ" type="3305" element="_UBzzAFjLEeiqGpQLkAnqcQ" source="_R6EqcljLEeiqGpQLkAnqcQ" target="_SocMUFjLEeiqGpQLkAnqcQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_UB2PQVjLEeiqGpQLkAnqcQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UB2PQljLEeiqGpQLkAnqcQ" points="[7, 20, 2, -50]$[7, 50, 2, -20]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

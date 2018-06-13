@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<ascon version="1.2">
+<connector id="WSDIVRCAMService" label="WSDIVRCAMService" icon="WSDIVRCAMService.gif" version="1.0">
+<!--
+			Textual description of the connector
+		-->
+<description>
+			Connector to the charging database for IVR Prepaid
+		</description>
+<include copy="true" file="WSDIVRCAMService.es"/>
+<properties name="WSDIVRCAMService">
+<property name="AS_URL" value="/SOAPConnector/SOAPConnector/"/>
+<property name="application" value="TestIVRPanama"/>
+<property name="service" value="WSDIVRCAMService"/>
+</properties>
+</connector>
+<requests>
+<request id="WSIVRCAMstring" label="WSIVRCAMstring" function="WSIVRCAMstring_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="WSIVRCAMstring.metodo" name="WSIVRCAMstring.metodo" default="" target="function" required="false">
+<description>metodo is of string type.</description>
+</param>
+<param label="WSIVRCAMstring.param" name="WSIVRCAMstring.param" default="" target="function" required="false">
+<description>param is of string type.</description>
+</param>
+<param label="WSIVRCAMstring.valor" name="WSIVRCAMstring.valor" default="" target="function" required="false">
+<description>valor is of string type.</description>
+</param>
+<param label="WSIVRCAMstring.delimitador" name="WSIVRCAMstring.delimitador" default="" target="function" required="false">
+<description>delimitador is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ConsultaSaldos" label="ConsultaSaldos" function="ConsultaSaldos_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ConsultaSaldos.Metodo" name="ConsultaSaldos.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ConsultaSaldos.msisdn" name="ConsultaSaldos.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ConsultaBolsas" label="ConsultaBolsas" function="ConsultaBolsas_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ConsultaBolsas.Metodo" name="ConsultaBolsas.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ConsultaBolsas.msisdn" name="ConsultaBolsas.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ConsultaBonos" label="ConsultaBonos" function="ConsultaBonos_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ConsultaBonos.Metodo" name="ConsultaBonos.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ConsultaBonos.msisdn" name="ConsultaBonos.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="CompraPaquete" label="CompraPaquete" function="CompraPaquete_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="CompraPaquete.Metodo" name="CompraPaquete.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="CompraPaquete.msisdn" name="CompraPaquete.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param label="CompraPaquete.nameProduct" name="CompraPaquete.nameProduct" default="" target="function" required="false">
+<description>nameProduct is of string type.</description>
+</param>
+<param label="CompraPaquete.IDDistributionChannel" name="CompraPaquete.IDDistributionChannel" default="" target="function" required="false">
+<description>IDDistributionChannel is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ConsultaNumeroFavorito" label="ConsultaNumeroFavorito" function="ConsultaNumeroFavorito_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ConsultaNumeroFavorito.Metodo" name="ConsultaNumeroFavorito.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ConsultaNumeroFavorito.msisdn" name="ConsultaNumeroFavorito.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param label="ConsultaNumeroFavorito.listCode" name="ConsultaNumeroFavorito.listCode" default="" target="function" required="false">
+<description>listCode is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ConsultaCategoriaCliente" label="ConsultaCategoriaCliente" function="ConsultaCategoriaCliente_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ConsultaCategoriaCliente.Metodo" name="ConsultaCategoriaCliente.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ConsultaCategoriaCliente.msisdn" name="ConsultaCategoriaCliente.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ConsultaExisteNumero" label="ConsultaExisteNumero" function="ConsultaExisteNumero_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ConsultaExisteNumero.Metodo" name="ConsultaExisteNumero.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ConsultaExisteNumero.msisdn" name="ConsultaExisteNumero.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ConsultaFactura" label="ConsultaFactura" function="ConsultaFactura_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ConsultaFactura.Metodo" name="ConsultaFactura.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ConsultaFactura.msisdn" name="ConsultaFactura.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ConsultaCliente" label="ConsultaCliente" function="ConsultaCliente_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ConsultaCliente.Metodo" name="ConsultaCliente.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ConsultaCliente.msisdn" name="ConsultaCliente.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="ValidaNIP" label="ValidaNIP" function="ValidaNIP_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="ValidaNIP.Metodo" name="ValidaNIP.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="ValidaNIP.msisdn" name="ValidaNIP.msisdn" default="" target="function" required="false">
+<description>msisdn is of string type.</description>
+</param>
+<param label="ValidaNIP.codigoNip" name="ValidaNIP.codigoNip" default="" target="function" required="false">
+<description>codigoNip is of string type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+<request id="WSIVRCAM" label="WSIVRCAM" function="WSIVRCAM_WSDIVRCAMService" type="JSON">
+<parameters>
+<param label="WSIVRCAM.Metodo" name="WSIVRCAM.Metodo" default="" target="function" required="false">
+<description>Metodo is of string type.</description>
+</param>
+<param label="WSIVRCAM.nombreParametro" name="WSIVRCAM.nombreParametro" default="" target="function" required="false">
+<description>nombreParametro is of string array type.</description>
+</param>
+<param label="WSIVRCAM.valorParametro" name="WSIVRCAM.valorParametro" default="" target="function" required="false">
+<description>valorParametro is of string array type.</description>
+</param>
+<param name="http.authorization" label="http.authorization" required="false" default="" target="function">
+<description/>
+</param>
+<param name="headers" label="headers" required="false" default="" target="function">
+<description/>
+</param>
+<param name="privateRequest" default="false" label="private" target="function">
+<description/>
+</param>
+</parameters>
+</request>
+</requests>
+</ascon>

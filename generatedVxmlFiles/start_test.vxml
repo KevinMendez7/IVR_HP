@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml application="globalContext.vxml" version="2.1" xmlns="http://www.w3.org/2001/vxml" xmlns:gmap="http://www.example.org/gmap" xmlns:java="com.hp.ocstudio.gmap.diagram.codegeneration.XSLSupportFunctions" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/vxml http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+    <var expr="" name="resp"/>
+    <var expr="" name="desturi"/>
+    <var expr="" name="remoteuri"/>
+    <form id="SetVariable_1">
+        <block>
+            <assign expr="getMsisdn(session.connection.remote.uri)" name="callingNumber"/>
+            <assign expr="getCalledNumber(session.connection.local.uri)" name="calledNumber"/>
+            <assign expr="getServerIP(session.connection.remote.uri)" name="callingIP"/>
+            <log label="Info">Calling Number: <value expr="callingNumber"/></log>
+            <log>Called Number: <value expr="calledNumber"/></log>
+            <log label="Info">calling IP:<value expr="callingIP"/></log>
+            <log label="Info">remoteuri:<value expr="session.connection.remote.uri"/></log>
+            <assign expr="&apos;sip:64262068@&apos;+callingIP+&apos;;user=phone&apos;" name="desturi"/>
+            <log><value expr="desturi"/></log>
+            <assign expr="&apos;sip:&apos;+callingNumber+&apos;@10.221.160.173:5060&apos;" name="remoteuri"/>
+            <goto nextitem="CallTransfer_1"/>
+        </block>
+        <transfer bridge="true" connecttimeout="10s" destexpr="desturi" maxtime="60s" name="CallTransfer_1">
+            <filled>
+                <assign expr="CallTransfer_1" name="resp"/>
+            </filled>
+            <catch count="1" event="connection.disconnect.transfer">
+                <assign expr="CallTransfer_1" name="resp"/>
+                <log>Result: <value expr="resp"/></log>
+            </catch>
+        </transfer>
+    </form>
+</vxml>

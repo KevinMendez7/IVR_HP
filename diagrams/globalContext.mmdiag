@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gmap="http://www.example.org/gmap" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <gmap:VxmlType xmi:id="_ct4SUFe6EeiVbJsIMMTamA" version="1.13">
+    <globalEventHandler xmi:type="gmap:GlobalEventHandlerType" xmi:id="_cudhIFe6EeiVbJsIMMTamA"/>
+    <variable xmi:type="gmap:VariableType" xmi:id="_cudhIVe6EeiVbJsIMMTamA">
+      <var xmi:type="gmap:VarType" xmi:id="_q7Z3AFh1EeiqGpQLkAnqcQ" name="subscriber" value=""/>
+      <var xmi:type="gmap:VarType" xmi:id="_E2Q5EFjPEeiqGpQLkAnqcQ" name="actualState" value=""/>
+      <var xmi:type="gmap:VarType" xmi:id="_cZbOMG4UEei2ep13hjBVQg" name="ivrpaResult" value=""/>
+    </variable>
+    <script xmi:type="gmap:ScriptType" xmi:id="_cnq2kFjAEeiqGpQLkAnqcQ" connetorType="Script URL" id="initialVariables" isData="false" label="initialVariables" source="../ECMAScripts/initialVariable.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_I-0LMFjBEeiqGpQLkAnqcQ" connetorType="Script URL" id="template" isData="false" label="template" source="../ECMAScripts/template.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_A2Qg8FjHEeiqGpQLkAnqcQ" connetorType="Script URL" id="audioStream" isData="false" label="audioStream" source="../ECMAScripts/audioStream.js"/>
+    <script xmi:type="gmap:ScriptType" xmi:id="_OEse4FjMEeiqGpQLkAnqcQ" connetorType="Script URL" id="deepestValidations" isData="false" label="deepestValidations" source="../ECMAScripts/deepestValidations.js"/>
+  </gmap:VxmlType>
+  <notation:Diagram xmi:id="_cueIMFe6EeiVbJsIMMTamA" type="Gmap" element="_ct4SUFe6EeiVbJsIMMTamA" name="globalContext.mmdiag" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_cueIMVe6EeiVbJsIMMTamA" type="1015" element="_cudhIFe6EeiVbJsIMMTamA" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cueIMle6EeiVbJsIMMTamA" x="150" y="10"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_cueIM1e6EeiVbJsIMMTamA" type="1001" element="_cudhIVe6EeiVbJsIMMTamA" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cueINFe6EeiVbJsIMMTamA"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_cnwWIFjAEeiqGpQLkAnqcQ" type="1010" element="_cnq2kFjAEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cnwWIVjAEeiqGpQLkAnqcQ" x="150" y="70"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_I-0yQFjBEeiqGpQLkAnqcQ" type="1010" element="_I-0LMFjBEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I-1ZUFjBEeiqGpQLkAnqcQ" x="150" y="135"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_A2WAgFjHEeiqGpQLkAnqcQ" type="1010" element="_A2Qg8FjHEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2WAgVjHEeiqGpQLkAnqcQ" x="155" y="190"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_OEttAFjMEeiqGpQLkAnqcQ" type="1010" element="_OEse4FjMEeiqGpQLkAnqcQ" fontName="Segoe UI">
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OEttAVjMEeiqGpQLkAnqcQ" x="155" y="260"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_cueINVe6EeiVbJsIMMTamA"/>
+  </notation:Diagram>
+</xmi:XMI>
